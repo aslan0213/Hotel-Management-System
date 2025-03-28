@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lenovo\\source\\repos\\HotelManagmentSystem\\HotelManagmentSystem.csproj",
-      "projectName": "HotelManagmentSystem",
-      "projectPath": "C:\\Users\\lenovo\\source\\repos\\HotelManagmentSystem\\HotelManagmentSystem.csproj",
+      "projectUniqueName": "C:\\Users\\lenovo\\source\\repos\\HotelManagementSystem\\HotelManagementSystem.csproj",
+      "projectName": "HotelManagementSystem",
+      "projectPath": "C:\\Users\\lenovo\\source\\repos\\HotelManagementSystem\\HotelManagementSystem.csproj",
       "packagesPath": "C:\\Users\\lenovo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lenovo\\source\\repos\\HotelManagmentSystem\\obj\\",
+      "outputPath": "C:\\Users\\lenovo\\source\\repos\\HotelManagementSystem\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",

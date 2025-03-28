@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace HotelManagmentSystem.Controllers
+namespace HotelManagementSystem.Controllers
 {
     public class BlogController : Controller
     {
