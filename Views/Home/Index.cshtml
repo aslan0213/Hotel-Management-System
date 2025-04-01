@@ -17,7 +17,40 @@
                         <a href="#"><i class="fa fa-tripadvisor"></i></a>
                         <a href="#"><i class="fa fa-instagram"></i></a>
                         </div> *@
-                        <a href="#" class="bk-btn">Booking Now</a>
+                        <div class="tn-right d-flex align-items-center justify-content-end gap-4">
+                            <ul class="navbar-nav d-flex flex-row align-items-center gap-3 mb-0">
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <li class="nav-item me-3">
+                                        <a class="nav-link" asp-controller="Account" asp-action="Logout">Logout</a>
+                                    </li>
+                                    <span>&nbsp;</span>
+                                    <span>&nbsp;</span>
+                                    <span>&nbsp;</span>
+                                    <span>&nbsp;</span>
+                                    <span>&nbsp;</span>
+                                }
+                                else
+                                {
+                                    <li class="nav-item me-3">
+                                        <a class="nav-link" asp-controller="Account" asp-action="Login">Log In</a>
+                                    </li>
+                                    <span>&nbsp;</span>
+                                    <span>&nbsp;</span>
+
+                                    <li class="nav-item me-3">
+                                        <a class="nav-link" asp-controller="Account" asp-action="Register">Register</a>
+                                    </li>
+                                    <span>&nbsp;</span>
+                                    <span>&nbsp;</span>
+                                    <span>&nbsp;</span>
+                                    <span>&nbsp;</span>
+                                    <span>&nbsp;</span>
+                                }
+                            </ul>
+                            <a asp-controller="Rooms" asp-action="Index" class="bk-btn">Booking Now</a>
+                        </div>
+
                         @*  <div class="language-option">
                         <img src="img/flag.jpg" alt="">
                         <span>EN <i class="fa fa-angle-down"></i></span>
@@ -183,8 +216,8 @@
                     <i class="flaticon-036-parking"></i>
                     <h4>Travel Plan</h4>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna.
+                        We offer personalized travel plans to ensure you have the best experience. 
+                        From itinerary planning to local insights, we take care of everything.
                     </p>
                 </div>
             </div>
@@ -193,8 +226,7 @@
                     <i class="flaticon-033-dinner"></i>
                     <h4>Catering Service</h4>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna.
+                        Enjoy top-quality catering with a variety of cuisines. Whether it’s a private event or a corporate gathering, we provide delicious meals tailored to your needs.
                     </p>
                 </div>
             </div>
@@ -203,8 +235,7 @@
                     <i class="flaticon-026-bed"></i>
                     <h4>Babysitting</h4>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna.
+                        Our trusted babysitting service ensures your child is in safe hands. Professional and caring sitters are available to look after your little ones while you relax.
                     </p>
                 </div>
             </div>
@@ -213,8 +244,7 @@
                     <i class="flaticon-024-towel"></i>
                     <h4>Laundry</h4>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna.
+                        Get fresh and clean clothes with our efficient laundry service. We handle washing, drying, and ironing with great care for your garments.
                     </p>
                 </div>
             </div>
@@ -223,8 +253,7 @@
                     <i class="flaticon-044-clock-1"></i>
                     <h4>Hire Driver</h4>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna.
+                        Need a professional driver? Our experienced and reliable chauffeurs provide safe and comfortable transportation for any occasion.
                     </p>
                 </div>
             </div>
@@ -233,8 +262,7 @@
                     <i class="flaticon-012-cocktail"></i>
                     <h4>Bar & Drink</h4>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna.
+                        Enjoy a premium selection of drinks at our bar. From classic cocktails to exclusive beverages, we serve the finest drinks to elevate your experience.
                     </p>
                 </div>
             </div>
@@ -301,7 +329,7 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <a href="#" class="primary-btn">More Details</a>
+                            <a asp-controller="PremiumKing" asp-action="Index" class="primary-btn">More Details</a>
                         </div>
                     </div>
                 </div>
@@ -387,7 +415,7 @@
                             After a construction project took longer than expected, my husband, my daughter and I
                             needed a place to stay for a few nights. As a Chicago resident, we know a lot about our
                             city, neighborhood and the types of housing options available and absolutely love our
-                            vacation at Sona Hotel.
+                            vacation at LuxeVoyage Hotel.
                         </p>
                         <div class="ti-author">
                             <div class="rating">
@@ -397,16 +425,34 @@
                                 <i class="icon_star"></i>
                                 <i class="icon_star-half_alt"></i>
                             </div>
-                            <h5> - Alexander Vasquez</h5>
+                            <h5> - Seyfi Isayev</h5>
                         </div>
                         <img src="img/testimonial-logo.png" alt="">
                     </div>
                     <div class="ts-item">
                         <p>
-                            After a construction project took longer than expected, my husband, my daughter and I
-                            needed a place to stay for a few nights. As a Chicago resident, we know a lot about our
-                            city, neighborhood and the types of housing options available and absolutely love our
-                            vacation at Sona Hotel.
+                            Staying at LuxeVoyage Hotel was an unforgettable experience! The staff was incredibly friendly,
+                            and the amenities were top-notch. The room was clean, spacious, and had an amazing view.
+                            We will definitely be coming back on our next trip!
+                        </p>
+                        <div class="ti-author">
+                            <div class="rating">
+                                <i class="icon_star"></i>
+                                <i class="icon_star"></i>
+                                <i class="icon_star"></i>
+                                <i class="icon_star"></i>
+                                <i class="icon_star"></i>
+                            </div>
+                            <h5> - Razil Cavadov</h5>
+                        </div>
+                        <img src="img/testimonial-logo.png" alt="">
+                    </div>
+
+                    <div class="ts-item">
+                        <p>
+                            From check-in to check-out, everything was seamless. The hotel is located in a perfect spot,
+                            close to all major attractions. The breakfast was delicious, and the service was outstanding.
+                            Highly recommend LuxeVoyage Hotel for anyone looking for a comfortable and luxurious stay.
                         </p>
                         <div class="ti-author">
                             <div class="rating">
@@ -416,10 +462,11 @@
                                 <i class="icon_star"></i>
                                 <i class="icon_star-half_alt"></i>
                             </div>
-                            <h5> - Alexander Vasquez</h5>
+                            <h5> - Ismayil Ismayilov</h5>
                         </div>
                         <img src="img/testimonial-logo.png" alt="">
                     </div>
+
                 </div>
             </div>
         </div>
@@ -443,7 +490,7 @@
                     <div class="bi-text">
                         <span class="b-tag">Travel Trip</span>
                         <h4><a href="#">Tremblant In Canada</a></h4>
-                        <div class="b-time"><i class="icon_clock_alt"></i> 15th April, 2019</div>
+                        <div class="b-time"><i class="icon_clock_alt"></i> 15th April, 2025</div>
                     </div>
                 </div>
             </div>
@@ -452,7 +499,7 @@
                     <div class="bi-text">
                         <span class="b-tag">Camping</span>
                         <h4><a href="#">Choosing A Static Caravan</a></h4>
-                        <div class="b-time"><i class="icon_clock_alt"></i> 15th April, 2019</div>
+                        <div class="b-time"><i class="icon_clock_alt"></i> 15th April, 2025</div>
                     </div>
                 </div>
             </div>
@@ -461,7 +508,7 @@
                     <div class="bi-text">
                         <span class="b-tag">Event</span>
                         <h4><a href="#">Copper Canyon</a></h4>
-                        <div class="b-time"><i class="icon_clock_alt"></i> 21th April, 2019</div>
+                        <div class="b-time"><i class="icon_clock_alt"></i> 21th April, 2025</div>
                     </div>
                 </div>
             </div>
@@ -469,8 +516,8 @@
                 <div class="blog-item small-size set-bg" data-setbg="img/blog/blog-wide.jpg">
                     <div class="bi-text">
                         <span class="b-tag">Event</span>
-                        <h4><a href="#">Trip To Iqaluit In Nunavut A Canadian Arctic City</a></h4>
-                        <div class="b-time"><i class="icon_clock_alt"></i> 08th April, 2019</div>
+                        <h4><a asp-controller="BlogDetailsExample" asp-action="Index">Trip To Iqaluit In Nunavut A Canadian Arctic City</a></h4>
+                        <div class="b-time"><i class="icon_clock_alt"></i> 08th April, 2025</div>
                     </div>
                 </div>
             </div>
@@ -478,8 +525,8 @@
                 <div class="blog-item small-size set-bg" data-setbg="img/blog/blog-10.jpg">
                     <div class="bi-text">
                         <span class="b-tag">Travel</span>
-                        <h4><a href="#">Traveling To Barcelona</a></h4>
-                        <div class="b-time"><i class="icon_clock_alt"></i> 12th April, 2019</div>
+                        <h4><a asp-controller="BlogDetailsExample" asp-action="Index">Traveling To Barcelona</a></h4>
+                        <div class="b-time"><i class="icon_clock_alt"></i> 12th April, 2025</div>
                     </div>
                 </div>
             </div>

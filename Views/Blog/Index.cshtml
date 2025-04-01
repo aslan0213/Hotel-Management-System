@@ -17,7 +17,40 @@
                         <a href="#"><i class="fa fa-tripadvisor"></i></a>
                         <a href="#"><i class="fa fa-instagram"></i></a>
                         </div> *@
-                        <a href="#" class="bk-btn">Booking Now</a>
+                        <div class="tn-right d-flex align-items-center justify-content-end gap-4">
+                            <ul class="navbar-nav d-flex flex-row align-items-center gap-3 mb-0">
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <li class="nav-item me-3">
+                                        <a class="nav-link" asp-controller="Account" asp-action="Logout">Logout</a>
+                                    </li>
+                                    <span>&nbsp;</span>
+                                    <span>&nbsp;</span>
+                                    <span>&nbsp;</span>
+                                    <span>&nbsp;</span>
+                                    <span>&nbsp;</span>
+                                }
+                                else
+                                {
+                                    <li class="nav-item me-3">
+                                        <a class="nav-link" asp-controller="Account" asp-action="Login">Log In</a>
+                                    </li>
+                                    <span>&nbsp;</span>
+                                    <span>&nbsp;</span>
+
+                                    <li class="nav-item me-3">
+                                        <a class="nav-link" asp-controller="Account" asp-action="Register">Register</a>
+                                    </li>
+                                    <span>&nbsp;</span>
+                                    <span>&nbsp;</span>
+                                    <span>&nbsp;</span>
+                                    <span>&nbsp;</span>
+                                    <span>&nbsp;</span>
+                                }
+                            </ul>
+                            <a asp-controller="Rooms" asp-action="Index" class="bk-btn">Booking Now</a>
+                        </div>
+
                         @*  <div class="language-option">
                         <img src="img/flag.jpg" alt="">
                         <span>EN <i class="fa fa-angle-down"></i></span>
@@ -99,7 +132,7 @@
                     <div class="bi-text">
                         <span class="b-tag">Travel Trip</span>
                         <h4><a href="blog-details.html">Tremblant In Canada</a></h4>
-                        <div class="b-time"><i class="icon_clock_alt"></i> 15th April, 2019</div>
+                        <div class="b-time"><i class="icon_clock_alt"></i> 15th April, 2025</div>
                     </div>
                 </div>
             </div>
@@ -117,7 +150,7 @@
                     <div class="bi-text">
                         <span class="b-tag">Event</span>
                         <h4><a href="blog-details.html">Copper Canyon</a></h4>
-                        <div class="b-time"><i class="icon_clock_alt"></i> 21th April, 2019</div>
+                        <div class="b-time"><i class="icon_clock_alt"></i> 21th April, 2025</div>
                     </div>
                 </div>
             </div>
@@ -125,8 +158,8 @@
                 <div class="blog-item set-bg" data-setbg="img/blog/blog-4.jpg">
                     <div class="bi-text">
                         <span class="b-tag">Trivago</span>
-                        <h4><a href="blog-details.html">A Time Travel Postcard</a></h4>
-                        <div class="b-time"><i class="icon_clock_alt"></i> 22th April, 2019</div>
+                        <h4><a asp-controller="BlogDetailsExample" asp-action="Index">A Time Travel Postcard</a></h4>
+                        <div class="b-time"><i class="icon_clock_alt"></i> 22th April, 2025</div>
                     </div>
                 </div>
             </div>
@@ -134,8 +167,8 @@
                 <div class="blog-item set-bg" data-setbg="img/blog/blog-5.jpg">
                     <div class="bi-text">
                         <span class="b-tag">Camping</span>
-                        <h4><a href="blog-details.html">A Time Travel Postcard</a></h4>
-                        <div class="b-time"><i class="icon_clock_alt"></i> 25th April, 2019</div>
+                        <h4><a asp-controller="BlogDetailsExample" asp-action="Index">A Time Travel Postcard</a></h4>
+                        <div class="b-time"><i class="icon_clock_alt"></i> 25th April, 2025</div>
                     </div>
                 </div>
             </div>
@@ -143,7 +176,7 @@
                 <div class="blog-item set-bg" data-setbg="img/blog/blog-6.jpg">
                     <div class="bi-text">
                         <span class="b-tag">Travel Trip</span>
-                        <h4><a href="blog-details.html">Virginia Travel For Kids</a></h4>
+                        <h4><a asp-controller="BlogDetailsExample" asp-action="Index">Virginia Travel For Kids</a></h4>
                         <div class="b-time"><i class="icon_clock_alt"></i> 28th April, 2019</div>
                     </div>
                 </div>
@@ -152,8 +185,8 @@
                 <div class="blog-item set-bg" data-setbg="img/blog/blog-7.jpg">
                     <div class="bi-text">
                         <span class="b-tag">Travel Trip</span>
-                        <h4><a href="blog-details.html">Bryce Canyon A Stunning</a></h4>
-                        <div class="b-time"><i class="icon_clock_alt"></i> 29th April, 2019</div>
+                        <h4><a asp-controller="BlogDetailsExample" asp-action="Index">Bryce Canyon A Stunning</a></h4>
+                        <div class="b-time"><i class="icon_clock_alt"></i> 29th April, 2025</div>
                     </div>
                 </div>
             </div>
@@ -161,8 +194,8 @@
                 <div class="blog-item set-bg" data-setbg="img/blog/blog-8.jpg">
                     <div class="bi-text">
                         <span class="b-tag">Event & Travel</span>
-                        <h4><a href="blog-details.html">Motorhome Or Trailer</a></h4>
-                        <div class="b-time"><i class="icon_clock_alt"></i> 30th April, 2019</div>
+                        <h4><a asp-controller="BlogDetailsExample" asp-action="Index">Motorhome Or Trailer</a></h4>
+                        <div class="b-time"><i class="icon_clock_alt"></i> 30th April, 2025</div>
                     </div>
                 </div>
             </div>
@@ -170,8 +203,8 @@
                 <div class="blog-item set-bg" data-setbg="img/blog/blog-9.jpg">
                     <div class="bi-text">
                         <span class="b-tag">Camping</span>
-                        <h4><a href="blog-details.html">Lost In Lagos Portugal</a></h4>
-                        <div class="b-time"><i class="icon_clock_alt"></i> 30th April, 2019</div>
+                        <h4><a asp-controller="BlogDetailsExample" asp-action="Index">Lost In Lagos Portugal</a></h4>
+                        <div class="b-time"><i class="icon_clock_alt"></i> 30th April, 2025</div>
                     </div>
                 </div>
             </div>

@@ -2335,3 +2335,12 @@ ul, ol {
 		margin-bottom: 10px;
 	}
 }
+.navbar-nav .nav-link {
+	color: #007bff; /* Исходный цвет */
+	transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+	.navbar-nav .nav-link:hover {
+		color: #B38356 !important; /* Новый цвет при наведении */
+		background-color: transparent !important; /* Убираем белый фон */
+	}
