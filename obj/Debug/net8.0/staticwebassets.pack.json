@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "C:\\Users\\lenovo\\source\\repos\\HotelManagementSystem\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\HotelManagementSystem.bundle.scp.css",
-      "PackagePath": "staticwebassets\\HotelManagementSystem.bundle.scp.css"
+      "PackagePath": "staticwebassets\\HotelManagementSystem.ufwg01jwx2.bundle.scp.css"
     },
     {
       "Id": "C:\\Users\\lenovo\\source\\repos\\HotelManagementSystem\\wwwroot\\css\\bootstrap.min.css",
@@ -383,6 +383,10 @@
     {
       "Id": "C:\\Users\\lenovo\\source\\repos\\HotelManagementSystem\\wwwroot\\js\\owl.carousel.min.js",
       "PackagePath": "staticwebassets\\js\\owl.carousel.min.js"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.HotelManagementSystem.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.HotelManagementSystem.Microsoft.AspNetCore.StaticWebAssets.props",

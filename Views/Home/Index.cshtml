@@ -19,38 +19,39 @@
                         </div> *@
                         <div class="tn-right d-flex align-items-center justify-content-end gap-4">
                             <ul class="navbar-nav d-flex flex-row align-items-center gap-3 mb-0">
-                                @if (User.Identity.IsAuthenticated)
-                                {
-                                    <li class="nav-item me-3">
-                                        <a class="nav-link" asp-controller="Account" asp-action="Logout">Logout</a>
-                                    </li>
-                                    <span>&nbsp;</span>
-                                    <span>&nbsp;</span>
-                                    <span>&nbsp;</span>
-                                    <span>&nbsp;</span>
-                                    <span>&nbsp;</span>
-                                }
-                                else
-                                {
-                                    <li class="nav-item me-3">
-                                        <a class="nav-link" asp-controller="Account" asp-action="Login">Log In</a>
-                                    </li>
-                                    <span>&nbsp;</span>
-                                    <span>&nbsp;</span>
-
-                                    <li class="nav-item me-3">
-                                        <a class="nav-link" asp-controller="Account" asp-action="Register">Register</a>
-                                    </li>
-                                    <span>&nbsp;</span>
-                                    <span>&nbsp;</span>
-                                    <span>&nbsp;</span>
-                                    <span>&nbsp;</span>
-                                    <span>&nbsp;</span>
+                                @{
+                                    var userId = Context.Session.GetInt32("UserId");
+                                    if (userId.HasValue)
+                                    {
+                                        <li class="nav-item me-3">
+                                            <a class="nav-link" asp-controller="Account" asp-action="Logout">Logout</a>
+                                        </li>
+                                        <span>&nbsp;</span>
+                                        <span>&nbsp;</span>
+                                        <span>&nbsp;</span>
+                                        <span>&nbsp;</span>
+                                        <span>&nbsp;</span>
+                                    }
+                                    else
+                                    {
+                                        <li class="nav-item me-3">
+                                            <a class="nav-link" asp-controller="Account" asp-action="Login">Log In</a>
+                                        </li>
+                                        <span>&nbsp;</span>
+                                        <span>&nbsp;</span>
+                                        <li class="nav-item me-3">
+                                            <a class="nav-link" asp-controller="Account" asp-action="Register">Register</a>
+                                        </li>
+                                        <span>&nbsp;</span>
+                                        <span>&nbsp;</span>
+                                        <span>&nbsp;</span>
+                                        <span>&nbsp;</span>
+                                        <span>&nbsp;</span>
+                                    }
                                 }
                             </ul>
                             <a asp-controller="Rooms" asp-action="Index" class="bk-btn">Booking Now</a>
                         </div>
-
                         @*  <div class="language-option">
                         <img src="img/flag.jpg" alt="">
                         <span>EN <i class="fa fa-angle-down"></i></span>
@@ -82,7 +83,7 @@
                             <ul>
                                 <li class="active"><a asp-controller="Home" asp-action="Index">Home</a></li>
                                 <li><a asp-controller="Rooms" asp-action="Index">Rooms</a></li>
-                                <li><a asp-controller="AboutUs" asp-action="Index">About Us</a></li>
+                                <li><a asp-controller="Rooms" asp-action="Index">About Us</a></li>
                                 @*  <li>
                                 <a href="pages.html">Pages</a>
                                 <ul class="dropdown">
@@ -300,7 +301,7 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <a href="#" class="primary-btn">More Details</a>
+                            <a asp-controller="PremiumKing" asp-action="Index" class="primary-btn">More Details</a>
                         </div>
                     </div>
                 </div>
@@ -358,7 +359,7 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <a href="#" class="primary-btn">More Details</a>
+                            <a asp-controller="PremiumKing" asp-action="Index" class="primary-btn">More Details</a>
                         </div>
                     </div>
                 </div>
@@ -387,7 +388,7 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <a href="#" class="primary-btn">More Details</a>
+                            <a asp-controller="PremiumKing" asp-action="Index" class="primary-btn">More Details</a>
                         </div>
                     </div>
                 </div>
@@ -489,7 +490,7 @@
                 <div class="blog-item set-bg" data-setbg="img/blog/blog-1.jpg">
                     <div class="bi-text">
                         <span class="b-tag">Travel Trip</span>
-                        <h4><a href="#">Tremblant In Canada</a></h4>
+                        <h4><a asp-controller="BlogDetailsExample" asp-action="Index">Tremblant In Canada</a></h4>
                         <div class="b-time"><i class="icon_clock_alt"></i> 15th April, 2025</div>
                     </div>
                 </div>
@@ -498,7 +499,7 @@
                 <div class="blog-item set-bg" data-setbg="img/blog/blog-2.jpg">
                     <div class="bi-text">
                         <span class="b-tag">Camping</span>
-                        <h4><a href="#">Choosing A Static Caravan</a></h4>
+                        <h4><a asp-controller="BlogDetailsExample" asp-action="Index">Choosing A Static Caravan</a></h4>
                         <div class="b-time"><i class="icon_clock_alt"></i> 15th April, 2025</div>
                     </div>
                 </div>
@@ -507,7 +508,7 @@
                 <div class="blog-item set-bg" data-setbg="img/blog/blog-3.jpg">
                     <div class="bi-text">
                         <span class="b-tag">Event</span>
-                        <h4><a href="#">Copper Canyon</a></h4>
+                        <h4><a asp-controller ="BlogDetailsExample" asp-action="Index">Copper Canyon</a></h4>
                         <div class="b-time"><i class="icon_clock_alt"></i> 21th April, 2025</div>
                     </div>
                 </div>
